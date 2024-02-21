@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/fenetre.css">
+    <link rel="stylesheet" href="style/configuration.css">
+    <link rel="stylesheet" href="style/game.css">
+    <script src="script/config.js" defer></script>
+    <script src="script/game.js" defer></script>
+    <script src="script/app.js" defer></script>
+    <title>tic tac toe</title>
+</head>
+<body>
+    <div class="backdrop"></div>
+    <header>
+        <h1>Joue Tic Tac Toe</h1>
+        <p>Construis avec HTML, CSS et Javascript</p>
+    </header>
+    
+    <main>
+        
+        <aside class="fenetre" id="configuration">
+            <h2>Entrer votre nom</h2>
+            <form>
+                <div class="form-control">
+                   <label for="nom">Nom:</label>
+                   <input type="text" name="nom" required id="nom">
+                   <p class="error"></p>
+                </div>
+                <div>
+                    <button class="btn btn-alt" type="button" id="sortir">Sortir</button>
+                    <button class="btn" type="submit" id="editerJoueur">Enregistrer</button>
+                </div>
+
+            </form>
+        </aside>
+
+        <section id="configuration-jeu">
+            <ul>
+                <li>
+                    <div>
+                        <h2>Joueur 1</h2>
+                        <h3 id="nom-1">nom 1</h3>
+                        <p>X</p>
+                        <button class="btn btn-alt" id="btn-nom-joueur1" data-numjoueur="1">Editer</button>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h2>Joueur 2</h2>
+                        <h3 id="nm-2">nom 2</h3>
+                        <p>O</p>
+                        <button class="btn btn-alt" id="btn-nom-joueur2" data-numjoueur="2">Editer</button>
+                    </div>
+                </li>
+            </ul>
+            <button id="btn-commencer" class="btn">Commencer</button>
+        </section>
+        <section class="errorGame">
+            <p></p>
+        </section>
+
+        <section id="jeu">
+
+            <article id="jeu-terminer">
+                <h2>vous avez gagnez <span id="joueur-gagnant">joueur</span></h2>
+                <p>Vous pouvez Commencer une nouvelle partie en clicant sur <strong>Commencer</strong></p>
+            </article>
+
+            <p>c'est ton tour <span id="joueur-actif"> Joueur</span> !</p>
+            <ul>
+                <li data-col="1" data-row="1"></li>
+                <li data-col="2" data-row="1"></li>
+                <li data-col="3" data-row="1"></li>
+            
+                <li data-col="1" data-row="2"></li>
+                <li data-col="2" data-row="2"></li>
+                <li data-col="3" data-row="2"></li>
+            
+                <li data-col="1" data-row="3"></li>
+                <li data-col="2" data-row="3"></li>
+                <li data-col="3" data-row="3"></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
